@@ -1,0 +1,2 @@
+fserver.o: server.c utilities.h
+	gcc server.c -o fserver

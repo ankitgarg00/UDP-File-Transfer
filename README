@@ -1,0 +1,40 @@
+Application Description -
+Reliable UDP file transfer.
+
+Current limitations -
+1. Transfers only text files
+2. The file which the client needs to send needs to be in the directory from which you are running the client program
+
+Common Library between client and server -
+utilities.h
+
+Server Related Info -
+Server files -
+server.c - source file for client
+makeserver - make file for client
+
+Compiling and running client on a linux/unix based machine with gcc installed -
+1. Download all the Server files into a directory
+2. To compile run the following command
+     make -f makeserver
+3. To run server
+     ./fserver
+Note -
+1. Server needs to run before the client.
+2. Currently all the files which the server is receiving will be placed in the same directory as where the server program is running.
+3. If two clients are transferring a file with the same name, then we can run into issues.
+
+
+Client Related Info -
+Client files -
+client.c - source file for client
+makeclient - make file for client
+
+Compiling and running client on a linux/unix based machine with gcc installed -
+1. Download all the Client files into a directory
+2. To compile run the following command
+     make -f makeclient
+3. To run client
+     ./fclient <server ip:port> <filename>
+Note - Transfer file needs to be in the same directory as the one you are running this command from. Also works only for text files.
+

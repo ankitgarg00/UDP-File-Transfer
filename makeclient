@@ -1,0 +1,2 @@
+fclient.o: client.c utilities.h
+	gcc client.c -o fclient
